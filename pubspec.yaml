@@ -1,0 +1,115 @@
+name: final_iot
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # --- CÁC GÓI CHÍNH (PHẢI NẰM Ở ĐÂY) ---
+  http: ^1.1.0                   # Sử dụng bản mới nhất, xóa bản cũ 0.13.6
+  provider: ^6.1.1              # Quản lý trạng thái (Light/Dark mode)
+  web_socket_channel: ^2.4.0    # Kết nối WebSocket Realtime
+  mqtt_client: ^10.2.0          # MQTT (nếu bạn vẫn dùng)
+  #qr_code_scanner: ^1.0.1        # Quét mã QR
+  mobile_scanner: ^5.0.0
+  flutter_blue_plus: ^1.31.0 # Để quét Bluetooth
+  flutter_esp_ble_prov: ^0.1.7 # Thêm thư viện này (hoặc phiên bản mới nhất)
+  # WiFi Management (optional)
+  wifi_iot: ^0.3.19
+  # Cryptography for Security 2
+  crypto: ^3.0.3
+
+  qr_flutter: ^4.1.0             # Hiển thị mã QR
+  permission_handler: ^11.3.1    # Xin quyền Camera/Vị trí
+  shared_preferences: ^2.2.2     # Lưu thông tin đăng nhập/Thiết bị
+  lucide_icons: ^0.257.0           # Icon hiện đại
+  # Thay lucide_icons bằng:
+  material_design_icons_flutter: ^7.0.7296  # Material Design Icons
+
+  # Font Awesome Icons (thay thế cho lucide_icons)
+  font_awesome_flutter: ^10.12.0
+
+  google_fonts: ^6.1.0           # Font chữ đẹp
+  intl: ^0.18.1                  # Định dạng ngày tháng/số
+  cupertino_icons: ^1.0.8
+  country_picker: ^2.0.27
+  #permission_handler: ^11.0.1
+  geolocator: ^10.0.0
+
+   # Social Auth - THÊM MỚI
+  google_sign_in: ^6.1.6
+  flutter_facebook_auth: ^6.0.4
+  #twitter_login: ^4.4.2
+  
+  # Optional but recommended
+  flutter_secure_storage: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0          # Cập nhật bản lints phù hợp sdk 3.10
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 300
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+
+  assets:
+    - assets/logo/logo.png
+    - assets/devices/
+    - assets/mockup/
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
